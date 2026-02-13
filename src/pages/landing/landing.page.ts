@@ -1,7 +1,7 @@
-import { BasePage } from "./base.page";
-import { config } from "../config/config";
+import { BasePage } from "../base.page";
+import { config } from "../../config/config";
 import { Page } from '@playwright/test';
-import { logger } from "../utils/logger"; // optional centralized logger
+import { logger } from "../../utils/logger"; // optional centralized logger
 
 export class LandingPage extends BasePage {
     //constructor(private page: Page) {}
