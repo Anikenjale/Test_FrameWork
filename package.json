@@ -1,0 +1,39 @@
+{
+  "name": "test_framework",
+  "version": "1.0.0",
+  "description": "Test framework with Playwright BDD cucumber, TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "playwright:install": "npx playwright install",
+    "report:generate": "node src/reporters/generate-report.js",
+    "clean": "rimraf reports",
+    "test": "npm run clean && cucumber-js",
+    "test:local": "cross-env HEADLESS=false BROWSER=chromium npm run test",
+    "report": "ts-node src/reporters/generate-report.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anikenjale/Test_FrameWork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Anikenjale/Test_FrameWork/issues"
+  },
+  "homepage": "https://github.com/Anikenjale/Test_FrameWork#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3",
+    "cross-env": "^10.1.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "dotenv": "^17.2.4",
+    "playwright": "^1.58.2",
+    "rimraf": "^6.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "winston": "^3.19.0"
+  }
+}
